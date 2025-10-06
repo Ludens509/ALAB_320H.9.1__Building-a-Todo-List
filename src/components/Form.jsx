@@ -43,8 +43,9 @@ export default function Form({dispatch}) {
 
   return (
     <>
+    <div className="form-container">
       <form className="form" onClick={handleAddTask}>
-        <div className="form-container">
+        
           {/* {errorMessage && (
                         <div className="error-message">
                           {errorMessage}
@@ -56,27 +57,18 @@ export default function Form({dispatch}) {
               type="text"
               value={taskInput}
               onChange={handleInputChange}
-              //   onKeyDown={handleKeyPress}
               placeholder="What needs to be done?"
               maxLength={100}
-              className="input"
+              className="input-task"
             />
-            {/* <select
-                          value={category}
-                          onChange={(e) => setCategory(e.target.value)}
-                          className={styles.select}
-                        >
-                          <option value="">Choose category</option>
-                          <option value="work">🏢 Work</option>
-                          <option value="home">🏠 Home</option>
-                          <option value="study">📚 Study</option>
-                        </select> */}
+           
           </div>
           <button type="submit" className="add-button">
             Add Task
           </button>
-        </div>
+        
       </form>
+      </div>
     </>
   );
 }

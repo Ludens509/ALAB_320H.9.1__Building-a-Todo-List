@@ -33,10 +33,10 @@ export default function EditForm({ task, onSave, onCancel }) {
         />
 
         <span style={{ margin: "8px" }}>
-          <button name="save" type="button" className={"save-button"} onClick={handleSave}>
+          <button name="save" type="button" className="save-button" onClick={handleSave}>
             save
           </button>
-          <button name="cancel" type="button" className={"cancel-button"} onClick={onCancel}>
+          <button name="cancel" type="button" className="cancel-button" onClick={onCancel}>
             cancel
           </button>
         </span>

@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-import EditForm from "../components/EditForm";
 import Form from "../components/Form";
 import Header from "../components/Header";
 import TodoListItem from "../components/TodoItem";
@@ -12,7 +11,7 @@ export default function Main() {
     const reducer = (state, action) => {
         switch (action.type) {
             case "ADD_TODO":
-                return [...state, action.payload];
+                return [ action.payload,...state];
             case "EDIT_TODO":
                 // action.payload expected: { id, title }
                 return state.map(todo => todo.id === action.payload.id ? { ...todo, title: action.payload.title } : todo);
@@ -31,7 +30,6 @@ export default function Main() {
 
     return (
         <div>
-            <h1>Main Page</h1>
             <Header/>
             <Form dispatch={dispatch} />
             {/* <EditForm/> */}
